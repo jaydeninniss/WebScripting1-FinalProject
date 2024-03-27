@@ -1,0 +1,365 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #1e1e1e;
+}
+
+
+.header {
+
+  position: relative;
+  z-index: 2;
+}
+
+.footer {
+  background-color: #1e1e1e;
+  height: 35vh;
+}
+
+.pagetitle {
+  position: absolute;
+  top: 2vh;
+  left: 40vw;
+
+}
+
+.pagetitle h2{
+  font-size: 4rem;
+}
+
+h4 {
+  color: aliceblue;
+}
+
+
+
+.weatherwidget {
+  display: flex;
+  width: 10vw;
+  position: relative;
+  padding-left: 3vw;
+  padding-top: 3vw;
+
+}
+
+#temp {
+  font-size: 4vw;
+  display: flex;
+  position: relative;
+}
+ 
+#main {
+  font-size: 5vw;
+  display: flex;
+  padding-left: 1vw;
+  position: relative;
+}
+
+#city {
+  font-size: 2vw;
+  display: flex;
+  padding-left: 1vw;
+  position: relative;
+}
+
+.weathericon {
+  width: 8vw;
+  height: 8vw;
+  background-image: url('/images/weathericons/sunny.png');
+  display: flex;
+  position: absolute;
+  top: -0.5vw;
+
+}
+
+.weathericonimg {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+nav{
+
+    top: 1%;
+    right: 1%;
+
+    display: block;
+    position: fixed;
+
+  }
+  
+  nav a{
+    color: rgb(21, 154, 221);
+    text-decoration: none;
+    font-size: 2rem;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+  nav a:hover{
+    background-color:rgb(21, 154, 221);
+    color: #fff;
+  }
+  
+  nav ul{
+
+    flex-direction: row;
+    overflow-y: hidden;
+    max-height: 0;
+    list-style-type: none; 
+    /* transition-property: all;
+    transition-duration: 1s; */
+  }
+  
+  nav ul li{
+    border-bottom: 1px solid #ddd;
+    list-style-type: none;
+
+  }
+
+
+  #idbanner {
+    width: 100%;
+    height: 655px;
+  }
+
+  .headlogo {
+    display: flex;
+    width: 18%;
+    position: absolute;
+    left: 3%;
+  }
+
+  .anchors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #fff;
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #fff;
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 250px;
+  }
+  
+  p {
+    font-size: 2rem;
+    color: #fff;
+    font-family: Geneva, Verdana, sans-serif;
+  }
+
+  .photogallery {
+    width: 97%;
+
+    display: grid;
+    grid-template-columns: 20fr 20fr 20fr 20fr;
+    gap: 1%;
+    padding: 1%;
+    padding-left: 2%;
+    position: relative;
+  }
+
+  .singlephoto{
+
+    height: 28vmin;
+    background: #49768F;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .photochunk {
+    height: 655px;
+    background: #49768F;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+  }
+  
+  .photobanner {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 20fr 20fr 20fr 20fr;
+    }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  #another {
+    background-image: url("/images/another.jpg");
+  }
+
+  #adventure {
+    background-image: url("/images/adventure.jpg");
+  }
+
+  #sport {
+    background-image: url("/images/sport.JPG");
+  }
+
+  #landscape {
+    background-image: url("/images/landscape.jpg");
+  }
+
+
+  #bigvideoreel {
+    display: flex;
+    margin: auto;
+    height: 60vh;
+    z-index: 8;
+  }
+
+
+
+
+  .mainproject {
+    width: 60%;
+    margin: auto;
+  }
+
+  .mainproject img {
+    width: 100%;
+
+  }
+
+  .thumbcontainer {
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 2%;
+  }
+
+  .projthumb {
+    width: 28%;
+  }
+
+  .projthumb img{
+    width: 100%;
+  }
+
+  .contact {
+    background-color: #49768F;
+    padding-bottom: 200px;  
+
+  }
+
+.contact-img {
+  width: 40%;
+  display: flex; 
+  margin-left: 55%;
+  border-radius: 20px;
+}
+
+.contact h3 {
+
+  padding-top: 40px;
+}
+
+
+.contactinfo {
+  position: absolute;
+  bottom: 50%;
+  left: 15vw;
+}
+
+
+
+
+@media screen and (max-width: 1300px) {
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .photobanner {
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+  }
+
+  .photogallery {
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+  }
+
+  .photochunk {
+    height: 40vh;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  
+  h3 {
+    font-size: 2rem;
+
+  }
+
+  .photobanner {
+
+    grid-template-columns: 20fr;
+
+  }
+
+  .photogallery {
+
+    padding-top: 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+  }
+
+  .singlephoto {
+    height: 400px;
+  }
+
+  .photochunk {
+    height: 40vh;
+  }
+
+  .pagetitle {
+    left: 5vw;
+
+  }
+
+  nav a {
+    color: rgb(21, 154, 221);
+    text-decoration: none;
+    font-size: 1.5rem;
+
+  }
+}
