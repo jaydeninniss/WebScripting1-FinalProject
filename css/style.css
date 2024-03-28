@@ -31,7 +31,12 @@ h4 {
   color: aliceblue;
 }
 
+.cityselect {
+  position: absolute;
+  top: 10vw;
+  
 
+}
 
 .weatherwidget {
   display: flex;

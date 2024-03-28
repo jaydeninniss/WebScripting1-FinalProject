@@ -10,10 +10,10 @@ let city;
 
 async function logweather(city) {
 
-    const response = await fetch('"https://api.openweathermap.org/data/2.5/weather?' + city);
-    console.log(city)
+    //const response = await fetch(city);
+    //console.log(city)
 
-   //const response = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=49.28190749158899&lon=-123.10989051451176&appid=12308284112402dcd0444c20a407d318&units=metric");
+   const response = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=49.28190749158899&lon=-123.10989051451176&appid=12308284112402dcd0444c20a407d318&units=metric");
    //const response = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=36.17361456664323&lon=-115.19963520827807&appid=12308284112402dcd0444c20a407d318&units=metric");
    //const response = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=47.80449069672075&lon=67.68321107803644&appid=12308284112402dcd0444c20a407d318&units=metric");
     //const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q="+cityname+"&appid=12308284112402dcd0444c20a407d318&units=metric");
@@ -65,17 +65,37 @@ async function logweather(city) {
 
     };
 
-  window.addEventListener('load', logweather);
+
 
     vanbtn = document.querySelector("#van");
     whisbtn = document.querySelector("#whis");
     kelownabtn = document.querySelector("#kelowna");
     kyivbtn = document.querySelector("#kyiv");
 
-    vanbtn.addEventListener("click", logweather('lat=49.28190749158899&lon=-123.10989051451176&appid=12308284112402dcd0444c20a407d318&units=metric"'));
-    whisbtn.addEventListener("click", logweather("lat=50.12457031254098&lon=-122.95838029921302&appid=12308284112402dcd0444c20a407d318&units=metric"));
-    kelownabtn.addEventListener("click", logweather("?lat=49.88533607419358&lon=-119.49251265360846&appid=12308284112402dcd0444c20a407d318&units=metric"));
-    whisbtn.addEventListener("click", logweather("?lat=50.44111774161272&lon=30.54295082049556&appid=12308284112402dcd0444c20a407d318&units=metric"));
+
+    function test() {
+        console.log("yee")
+    }
+    vanbtn.addEventListener("click", test())
+
+    function setcity (city) {
+        switch (city) {
+            case 'van':
+                console.log("vancouver GOOD");
+            case 'whistler':
+                console.log("Whistler good");
+            case 'kelowna':
+                console.log("Kelowna Good");
+        }
+        
+    }
+
+    vanbtn.addEventListener("click", setcity(van));
+    whisbtn.addEventListener("click", setcity(whistler));
+
+    window.addEventListener('load', logweather);
+    //kelownabtn.addEventListener("click", logweather("?lat=49.88533607419358&lon=-119.49251265360846&appid=12308284112402dcd0444c20a407d318&units=metric"));
+    //whisbtn.addEventListener("click", logweather("?lat=50.44111774161272&lon=30.54295082049556&appid=12308284112402dcd0444c20a407d318&units=metric"));
 
 
 
